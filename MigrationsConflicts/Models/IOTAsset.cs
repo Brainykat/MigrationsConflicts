@@ -8,7 +8,8 @@ namespace MigrationsConflicts.Models
   public class IOTAsset
   {
     public Guid Id { get; set; }
-    public string Name { get; set; } //field A
+    public string Name { get; set; } 
     public DateTime DateCreated { get; set; }
+    
   }
 }
