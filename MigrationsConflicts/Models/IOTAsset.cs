@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace MigrationsConflicts.Models
+{
+  public class IOTAsset
+  {
+    public Guid Id { get; set; }
+    public string Name { get; set; } //field A
+    public DateTime DateCreated { get; set; }
+  }
+}
