@@ -12,5 +12,6 @@ namespace MigrationsConflicts.Models
     public DateTime DateCreated { get; set; }
     public string Field_B { get; set; }
     public string Field_A { get; set; }
+    public string Field_C { get; set; }
   }
 }
