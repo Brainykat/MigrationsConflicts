@@ -17,5 +17,6 @@ namespace MigrationsConflicts.Models
     public string Field_C { get; set; }
     public int NewField { get; set; }
     public int NewField_1 { get; set; }
+    public string FieldFromMaster { get; set; }
   }
 }
