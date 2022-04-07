@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MigrationsConflicts.Data;
 
 namespace MigrationsConflicts.Migrations
 {
     [DbContext(typeof(DMPContext))]
-    partial class DMPContextModelSnapshot : ModelSnapshot
+    [Migration("20220407092438_YetAnotherField")]
+    partial class YetAnotherField
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,16 +33,7 @@ namespace MigrationsConflicts.Migrations
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("FieldFromMaster")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Field_A")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Field_B")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Field_C")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Field_D")
@@ -51,18 +44,6 @@ namespace MigrationsConflicts.Migrations
 
                     b.Property<string>("YetAnotherField")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("YetAnotherField_1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("YetAnotherField_2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("NewField")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NewField_1")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
