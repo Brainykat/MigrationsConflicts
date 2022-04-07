@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MigrationsConflicts.Data;
 
 namespace MigrationsConflicts.Migrations
 {
     [DbContext(typeof(DMPContext))]
-    partial class DMPContextModelSnapshot : ModelSnapshot
+    [Migration("20220407091200_field_D")]
+    partial class field_D
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,9 +27,6 @@ namespace MigrationsConflicts.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("AnotherField")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
@@ -37,20 +36,8 @@ namespace MigrationsConflicts.Migrations
                     b.Property<string>("Field_D")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Field_B")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Field_C")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("NewField")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NewField_1")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
