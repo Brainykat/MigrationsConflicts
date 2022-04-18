@@ -10,8 +10,6 @@ namespace MigrationsConflicts.Models
     public Guid Id { get; set; }
     public string Name { get; set; } 
     public DateTime DateCreated { get; set; }
-    public string Description { get; set; }
-    //public string Field_B { get; set; }
-    public string Field_A { get; set; }    
+       
   }
 }
