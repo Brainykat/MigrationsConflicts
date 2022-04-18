@@ -10,8 +10,8 @@ using MigrationsConflicts.Data;
 namespace MigrationsConflicts.Migrations
 {
     [DbContext(typeof(DMPContext))]
-    [Migration("20220407091950_AnotherField")]
-    partial class AnotherField
+    [Migration("20220418054449_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,17 +27,8 @@ namespace MigrationsConflicts.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("AnotherField")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Field_A")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Field_D")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");

@@ -25,44 +25,11 @@ namespace MigrationsConflicts.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("AnotherField")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("FieldFromMaster")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Field_A")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Field_B")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Field_C")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Field_D")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("YetAnotherField")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("YetAnotherField_1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("YetAnotherField_2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("NewField")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NewField_1")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
